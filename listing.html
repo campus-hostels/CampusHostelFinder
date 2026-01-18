@@ -51,6 +51,18 @@
   <footer class="bg-gray-200 text-center p-4 mt-6">
     &copy; 2026 Campus Hostel Finder
   </footer>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const search = params.get("search")?.toLowerCase();
+
+  if (search) {
+    document.querySelectorAll(".hostel-card").forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(search) ? "block" : "none";
+    });
+  }
+</script>
+
 
 </body>
 <script src="js/script.js"></script>

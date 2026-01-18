@@ -36,10 +36,12 @@
   </footer>
 
   <script>
-    document.getElementById("searchBtn").addEventListener("click", function () {
-      window.location.href = "listings.html";
-    });
-  </script>
+  document.getElementById("searchBtn").addEventListener("click", function () {
+    const query = document.getElementById("searchInput").value;
+    window.location.href = "listings.html?search=" + query;
+  });
+</script>
+
 
 </body>
 </html>
